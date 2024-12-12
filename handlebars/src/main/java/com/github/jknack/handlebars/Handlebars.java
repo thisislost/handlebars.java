@@ -222,7 +222,7 @@ public class Handlebars implements HelperRegistry {
     }
 
     static int javaVersion() {
-      String version = System.getProperty("java.specification.version").trim();
+      String version = System.getProperty("java.specification.version").trim().replace("0.9", "1.8");
       return Integer.parseInt(version.replace(VERSION_PREFIX, ""));
     }
 
